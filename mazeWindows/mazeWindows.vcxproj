@@ -138,6 +138,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.c" />
+    <ClCompile Include="trying.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="utils.h" />
