@@ -4,9 +4,11 @@
 */
 
 SDL_Window* window;
-//SDL_Surface* ScreenSurface;
+/*SDL_Surface* ScreenSurface;*/
 SDL_Surface* HelloWorld;
 SDL_Renderer* s;
+SDL_Rect fillRect;
+SDL_Event e;
 
 
 
@@ -85,7 +87,7 @@ void close()
 
 
 
-int main(int argc, char* argv[])
+int main()
 {
 	if (!init())
 	{
@@ -96,11 +98,13 @@ int main(int argc, char* argv[])
 		if (!s)
 		{
 			printf("Rendered could not init %s\n", SDL_GetError());
-		}
-		SDL_Rect fillRect = { 380, 280, 20, 20 };
+		}	
+		/*fillRect = { 380, 280, 20, 20 };*/
+		fillRect.x = 380;
+		fillRect.y = 280;
+		fillRect.w = 20;
+		fillRect.h = 20;
 
-
-		SDL_Event e;
 		bool quit = false;
 		while (!quit)
 		{
